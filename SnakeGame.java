@@ -44,10 +44,10 @@ public class SnakeGame implements ActionListener, KeyListener {
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jframe.add(drawingPanel = new DrawingPanel());
         jframe.addKeyListener(this);
-        Dimension ekran = Toolkit.getDefaultToolkit().getScreenSize();
-        int Ekranx = (int) ((ekran.getWidth() - jframe.getWidth()) / 2);
-        int Ekrany = (int) ((ekran.getHeight() - jframe.getHeight()) / 2);
-        jframe.setLocation(Ekranx, Ekrany);
+        Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
+        int screenX = (int) ((screen.getWidth() - jframe.getWidth()) / 2);
+        int screenY = (int) ((screen.getHeight() - jframe.getHeight()) / 2);
+        jframe.setLocation(screenX, screenY);
         do {
             String sLevel = JOptionPane.showInputDialog(jframe, "Enter a level (Between 1-10): ", "5");
             level = Integer.parseInt(sLevel);
